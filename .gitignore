@@ -1,0 +1,8 @@
+backEnd/node_modules
+frontEnd/node_modules
+node_modules 
+backEnd/config/.env
+frontEnd/.env
+frontEnd/public/pic-user
+frontEnd/public/pic-fiche-mere
+frontEnd/public/picture
