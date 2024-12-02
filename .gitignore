@@ -1,7 +1,7 @@
-# **/.env
+**/.env
 **/node_modules/
-# **/uploads/
+**/uploads/
  
-**/picture/
+# **/picture/
 **/power.bat 
-**/process/e-CIN
+# **/process/e-CIN
