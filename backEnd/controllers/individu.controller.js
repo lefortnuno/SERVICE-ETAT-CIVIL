@@ -1,5 +1,5 @@
 "use strict";
-const Individu = require("../models/Individu.model");
+const Individu = require("../models/individu.model");
 const ProcedureCIN = require("../models/procedure.cin.model");
 const path = require("path");
 const multer = require("multer");
