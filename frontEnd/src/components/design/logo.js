@@ -10,13 +10,13 @@ export default function LogoContext() {
     <>
       {u_info.u_token ? (
         <div className="logo-header">
-        <p className="logo">
-          <img
-            src={process.env.PUBLIC_URL + `/picture/logo/e-CIN.png`}
-            alt="pdp"
-            style={{ width: "80%", height: "100%", borderRadius: "0%" }}
-          /> 
-        </p>
+          <p className="logo">
+            <img
+              src={process.env.PUBLIC_URL + `/picture/logo/e-CIN.png`}
+              alt="pdp"
+              style={{ width: "auto", height: "55px", borderRadius: "0%" }}
+            />
+          </p>
 
           <button
             className="navbar-toggler sidenav-toggler ml-auto"
