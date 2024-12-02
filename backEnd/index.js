@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
 require("dotenv").config({ path: "./config/.env" });
 
 const utilisateurRoute = require("./routes/utilisateur.route");
@@ -14,19 +15,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header(
-		"Access-Control-Allow-Methods",
-		"GET, POST, PATCH, PUT, DELETE, OPTIONS"
-	);
-	res.header(
-		"Access-Control-Allow-Headers",
-		"Origin, X-Requested-With, Content-Type, Accept, Authorization"
-	);
-	if (req.method === "OPTIONS") {
-		return res.status(200).end();
-	}
-	next();
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+  );
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+  next();
 });
 
 app.use("/api/utilisateur", utilisateurRoute);
@@ -36,6 +37,8 @@ app.use("/api/profession", professionRoute);
 app.use("/api/procedure_cin", procedureCINRoute);
 app.use("/api/arrondissement", arrondissementRoute);
 
-app.listen(process.env.PORT || process.env.URL_HOST_IP, () => {
-	console.log(`Ecoute au port ${process.env.PORT} .... `);
+app.use("/api/uploads", express.static(path.join(__dirname, "uploads")));
+
+app.listen(process.env.PORT || process.env.IP_HOST, () => {
+  console.log(`Lancé sur ${process.env.IP_HOST}:${process.env.PORT} .... `);
 });

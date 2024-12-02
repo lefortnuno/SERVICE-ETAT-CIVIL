@@ -8,22 +8,20 @@ export default function FooterContext() {
           <nav className="pull-left">
             <ul className="nav">
               <li className="nav-item">
-                <Link to="/accueil/" className="nav-link text-primary" >
+                <Link to="/accueil/" className="nav-link text-primary">
                   A.V-H
                 </Link>
               </li>
               <li className="nav-item">
-                <span className="nav-link" >
-                  Aide
-                </span>
+                <span className="nav-link">Aide</span>
               </li>
             </ul>
           </nav>
-          
+
           <div className="copyright ml-auto">
             Réaliser par :
-            <a href="https://www.facebook.com/nykanto.michella" target="_blank">
-              <span> Ny Kanto </span>
+            <a href="https://www.facebook.com/tendo.lelouch" target="_blank">
+              <span> Trofel </span>
             </a>
             <span> en 2023 </span>
           </div>

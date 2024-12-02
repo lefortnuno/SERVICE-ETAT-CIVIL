@@ -43,7 +43,7 @@ export default function SeConnecter() {
 								<div className="wrap-login100">
 									<div className="login100-pic js-tilt" data-tilt>
 										<img
-											src={process.env.PUBLIC_URL + `/picture/fanjakana.jpg`}
+											src={process.env.PUBLIC_URL + `/picture/logo/fanjakana.jpg`}
 											alt="image"
 										/>
 									</div>

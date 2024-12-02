@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 21 déc. 2022 à 20:19
+-- Généré le :  lun. 02 déc. 2024 à 15:47
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -11,6 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -77,9 +78,10 @@ CREATE TABLE IF NOT EXISTS `individu` (
 --
 
 INSERT INTO `individu` (`cin`, `nom`, `prenom`, `nomPere`, `nomMere`, `lieunais`, `datenais`, `domicile`, `cicatrice`, `longueur`, `datelivrance`, `imgFaceFM`, `imgDosFM`, `p_idOrigine`, `p_idArrondissement`, `p_idProfession`) VALUES
-('201011028460', 'LEFORT', 'Nomenjanahary Nuno', 'AAAAAA', 'BBBBBB', 'TAMATAVE', '2000-07-29', 'ROVA 206', NULL, 1.2, '2018-08-07', '', '', 1, 1, 1),
-('201011011028', 'AAAAA', 'AAAAA', 'AAAAA', 'BBBBB', 'AAAAAA', '2003-12-12', 'VVVVV', 'Aucune', 1.5, '2022-12-20', '1671566365793-Games-Wallpapers-Pc-Gamer-Wallpaper-4k-Free-Wallpaper-.jpg', '1671566365796-thumb-1920-911358.jpg', 1, 1, 1),
-('201012028460', 'BBBBBBB', 'Nomenjanahary Nuno', 'AAAAAA', 'BBBBBB', 'TAMATAVE', '2000-07-29', 'ROVA 206', NULL, 1.2, '2018-08-07', '1671616914954-16716168798366083694080007117709.jpg', '1671616914960-16716169017814839170552246636196.jpg', 1, 1, 1);
+('201011028481', 'LEFORT', 'Nomenjanahary Nuno', 'RAZANADRABALY', 'RAMIANDRISOA', 'TAMATAVE', '2000-07-29', 'ROVA 206', NULL, 1.82, '2018-08-07', 'uploads/fiche-mere-template/1733154117318-IMG_20230105_131126.jpg', 'uploads/fiche-mere-template/1733154117322-IMG_20230105_131134.jpg', 1, 1, 1),
+('201011011028', 'RAZAFITSIAFAZATO', 'Amanerson Barlys Mureille', 'RABENOIS', 'RABENAIVO Marie', 'Andranovorivato F/tsoa', '1983-11-01', 'Ampitankely', 'Aucune', 1.31, '2001-05-02', 'uploads/devant/1671566365793-Games-Wallpapers-Pc-Gamer-Wallpaper-4k-Free-Wallpaper-.jpg', 'uploads/derriere/1671566365796-thumb-1920-911358.jpg', 1, 1, 1),
+('201012099460', 'RANDRIANANANDRASANA', 'José Pascal', 'RAKOTOZAFY Arison', 'GERTRUDE Bennette', 'Ambatolahikisoa F/tsoa', '1996-04-03', 'Imandry', NULL, 1.72, '2014-02-10', 'uploads/devant/1671616914954-16716168798366083694080007117709.jpg', 'uploads/derriere/1671616914960-16716169017814839170552246636196.jpg', 1, 1, 1),
+('201011028483', 'TROFEL', '', 'RAZANADRABALY', 'RAMIANDRISOA', 'TOAMASINA', '2000-07-29', 'Amatovory Lot0203', NULL, 1.93, '2018-08-07', '', '', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1696,16 +1698,17 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `mdp` varchar(100) NOT NULL,
   `etatUtilisateur` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`idUtilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`idUtilisateur`, `attribut`, `identification`, `photoPDP`, `mdp`, `etatUtilisateur`) VALUES
-(1, 'Administrateur', 'nuno', NULL, 'nuno', 1),
-(2, 'utilisateur', 'kanto-2', NULL, '$2b$10$iTs8E9VvT2A5L3UgOn46wu.SsPAY4w.R3y0M9fl1izaGBi.esqHG.', 0),
-(3, 'utilisateur', 'kanto-3', NULL, '$2b$10$c25jNx6.WFDML7XBlD3LOeTX.7g1Re37084M85jVAzNpAl32zvU/G', 1);
+(1, 'Administrateur', 'LEFORT', 'uploads/1672771262506-pdp.png', '$2b$10$4WBMGWWIiMbljSTSa99Tfur3Wbg9psmXswKck4x30f/30u7kv.pmy', 1),
+(2, 'utilisateur', 'user-1', 'uploads/1672771262506-logo2.png', '$2b$10$4WBMGWWIiMbljSTSa99Tfur3Wbg9psmXswKck4x30f/30u7kv.pmy', 0),
+(3, 'utilisateur', 'user-2', 'uploads/2672771262506-logo2.png', '$2b$10$4WBMGWWIiMbljSTSa99Tfur3Wbg9psmXswKck4x30f/30u7kv.pmy', 1),
+(4, 'Administrateur', 'TROFEL', 'uploads/1672771262506-pdp.png', '$2b$10$4WBMGWWIiMbljSTSa99Tfur3Wbg9psmXswKck4x30f/30u7kv.pmy', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
