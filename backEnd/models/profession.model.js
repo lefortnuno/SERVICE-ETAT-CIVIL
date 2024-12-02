@@ -6,7 +6,7 @@ let Profession = function (profession) {
 };
 
 Profession.addProfession = (newProfession, result) => {
-  dbConn.query("INSERT INTO Profession SET ?", newProfession, (err, res) => {
+  dbConn.query("INSERT INTO profession SET ?", newProfession, (err, res) => {
     if (err) {
       result(err, null);
     } else {
@@ -16,7 +16,7 @@ Profession.addProfession = (newProfession, result) => {
 };
 
 Profession.getAllIProfessions = (result) => {
-  dbConn.query("SELECT * FROM Profession", (err, res) => {
+  dbConn.query("SELECT * FROM profession", (err, res) => {
     if (err) {
       result(err, null);
     } else {
@@ -27,7 +27,7 @@ Profession.getAllIProfessions = (result) => {
 
 Profession.getidProfession = (idProfession, result) => {
   dbConn.query(
-    "SELECT * FROM Profession WHERE idProfession = ?",
+    "SELECT * FROM profession WHERE idProfession = ?",
     idProfession,
     (err, res) => {
       if (err) {
@@ -58,7 +58,7 @@ Profession.searchProfession  = (valeur, result) => {
 
 Profession.updateProfession = (updateProfession, idProfession, result) => {
   dbConn.query(
-    `update Profession set ? where idProfession = ${idProfession}`,
+    `update profession set ? where idProfession = ${idProfession}`,
     updateProfession,
     function (err, res) {
       if (err) {
@@ -72,7 +72,7 @@ Profession.updateProfession = (updateProfession, idProfession, result) => {
 
 Profession.deleteProfession = (idProfession, result) => {
   dbConn.query(
-    `DELETE  FROM Profession WHERE idProfession=${idProfession}`,
+    `DELETE  FROM profession WHERE idProfession=${idProfession}`,
     function (err, res) {
       if (err) {
         result(err, null);

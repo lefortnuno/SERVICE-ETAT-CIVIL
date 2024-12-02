@@ -44,12 +44,12 @@ SELECT
     p_idArrondissement,
     p_idProfession
 FROM
-    PROCEDURE_CIN,
-    INDIVIDU,
-    UTILISATEUR
+    procedure_cin,
+    individu,
+    utilisateur
 WHERE
-    PROCEDURE_CIN.p_idUtilisateur = UTILISATEUR.idUtilisateur
-    AND PROCEDURE_CIN.p_cin = INDIVIDU.cin `;
+    procedure_cin.p_idUtilisateur = utilisateur.idUtilisateur
+    AND procedure_cin.p_cin = individu.cin `;
 
 const REQUETE_MYSQL_MOIS = ` SELECT
 DATE_FORMAT(dateProcedure, '%m') as Mois,
@@ -57,7 +57,7 @@ COUNT(IF(etatCin = 'PRIMA', 1, NULL)) 'PRIMA',
 COUNT(IF(etatCin = 'USURE', 1, NULL)) 'USURE',
 COUNT(IF(etatCin = 'PERTE', 1, NULL)) 'PERTE'
 from
-PROCEDURE_CIN
+procedure_cin
 GROUP BY
 MONTH(dateProcedure) `;
 
@@ -67,7 +67,7 @@ COUNT(IF(etatCin = 'PRIMA', 1, NULL)) 'PRIMA',
 COUNT(IF(etatCin = 'USURE', 1, NULL)) 'USURE',
 COUNT(IF(etatCin = 'PERTE', 1, NULL)) 'PERTE'
 from
-PROCEDURE_CIN
+procedure_cin
 GROUP BY
 YEAR(dateProcedure) `;
 
@@ -140,7 +140,7 @@ Procedure_CIN.updateProcedure_CIN = (
   result
 ) => {
   dbConn.query(
-    `update PROCEDURE_CIN set ? where idProcedureCin = ${idProcedureCin}`,
+    `update procedure_cin set ? where idProcedureCin = ${idProcedureCin}`,
     updateProcedure,
     function (err, res) {
       if (err) {

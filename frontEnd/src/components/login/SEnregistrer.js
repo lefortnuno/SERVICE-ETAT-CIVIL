@@ -19,7 +19,7 @@ export default function SEnregistrer() {
 							<img
 								src={process.env.PUBLIC_URL + `/picture/logo/e-CIN.png`}
 								alt="pdp"
-								style={{ width: "80%", height: "100%", borderRadius: "0%" }}
+								style={{ width: "auto", height: "55px", borderRadius: "0%" }}
 							/>
 						</p>
 					</div>

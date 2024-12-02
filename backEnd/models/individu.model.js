@@ -44,14 +44,14 @@ SELECT
 
 const REQUETE_FROM = ` 
 FROM
-    INDIVIDU,
-    ARRONDISSEMENT,
-    ORIGINE,
-    PROFESSION
+    individu,
+    arrondissement,
+    origine,
+    profession
 WHERE
-    INDIVIDU.p_idorigine = ORIGINE.idOrigine
-    AND INDIVIDU.p_idArrondissement = ARRONDISSEMENT.idArrondissement
-    AND INDIVIDU.p_idProfession = PROFESSION.idProfession `;
+    individu.p_idorigine = origine.idOrigine
+    AND individu.p_idArrondissement = arrondissement.idArrondissement
+    AND individu.p_idProfession = profession.idProfession `;
 
 const REQUETE_ORDRE = ` ORDER BY dateLivrance DESC `;
 
