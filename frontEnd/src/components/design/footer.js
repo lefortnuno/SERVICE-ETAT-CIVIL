@@ -12,8 +12,18 @@ export default function FooterContext() {
                   A.V-H
                 </Link>
               </li>
-              <li className="nav-item">
-                <span className="nav-link">Aide</span>
+              <li
+                className="nav-item" 
+              >
+                <a
+                  href="https://trofel.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ cursor: "pointer" }}
+                  className="nav-link"
+                >
+                  Aide
+                </a>
               </li>
             </ul>
           </nav>

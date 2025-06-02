@@ -95,7 +95,13 @@ export default function HeaderContext() {
             <ul className="dropdown-menu dropdown-user">
               <li>
                 <div className="user-box">
-                  <div className="u-img">
+                  <a
+                    className="u-img"
+                    href="https://trofel.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ cursor: "pointer" }}
+                  >
                     <img
                       src={
                         process.env.REACT_APP_SUN_COMPLET_URL +
@@ -103,7 +109,7 @@ export default function HeaderContext() {
                       }
                       alt="pdp"
                     />
-                  </div>
+                  </a>
 
                   <div className="u-text">
                     <h4> {u_info.u_identification} </h4>
